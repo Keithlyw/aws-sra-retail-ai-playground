@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><style id="qw-theme">:root {
+  --color-bg: #faf9fc !important;
+  --color-text: #131920 !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: #b400aa !important;
+  --highlight-selected-bg-color: #006400 !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+  --flow-size-overview-canvas-min-height: 480px !important;
+  --chat-column-max: clamp(888px, 50vw, 1200px) !important;
+  --color-navbar-bg: #f9f9fb !important;
+  --color-navbar-fg: #131920 !important;
+  --color-navbar-fg-muted: color-mix(in srgb, #131920 65%, #f9f9fb) !important;
+  --color-navbar-divider: #0000001f !important;
+  --color-leftnav-bg: #f9f9fb !important;
+  --color-bg-chat-view: #f9f9fb !important;
+  --color-bg-secondary: #fff !important;
+  --color-bg-tertiary: #f9fafb !important;
+  --color-bg-hover: #f3f4f6 !important;
+  --color-surface: #f9fafb !important;
+  --color-surface-hover: #f3f4f6 !important;
+  --color-surface-active: #e5e7eb !important;
+  --color-border: #0000001f !important;
+  --color-border-light: #0000000f !important;
+  --color-border-strong: #d1d5db !important;
+  --background-toggle-off-default: #fff0 !important;
+  --color-primary: #4200db !important;
+  --color-primary-dark: #35009e !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: #e8e6ff !important;
+  --color-primary-hover-border: #35009e !important;
+  --color-nav-icon-active: #4200db !important;
+  --color-nav-hover-border: #4200db !important;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-focus-ring: #4200db !important;
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent) !important;
+  --block-selected-outline: 1px solid #8575ff !important;
+  --block-selection-outline-offset: 2px !important;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-accent: #4200db !important;
+  --color-accent-foreground: #4200db !important;
+  --color-accent-dark: #35009e !important;
+  --color-accent-light: #e8e6ff !important;
+  --color-accent-inverse: #fff !important;
+  --color-link: #4200db !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-brand-kiro: #9147ff !important;
+  --color-primary-gradient-end: #e8e6ff !important;
+  --color-primary-bg-solid: #e8e6ff !important;
+  --color-user-bubble: #f3f3f7 !important;
+  --color-user-bubble-text: #131920 !important;
+  --color-text-secondary: #5e5e5e !important;
+  --color-text-tertiary: #656871 !important;
+  --color-text-muted: #656871 !important;
+  --color-text-on-primary: #fff !important;
+  --color-success: #00802f !important;
+  --color-success-dark: #00471e !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #e6f5eb !important;
+  --color-success-border: #b3d9bf !important;
+  --color-success-foreground: #00802f !important;
+  --color-success-dark-foreground: #00471e !important;
+  --color-success-text: #00471e !important;
+  --color-error: #db0000 !important;
+  --color-error-dark: #700000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #ffe0e0 !important;
+  --color-error-bg: #fceaea !important;
+  --color-error-border: #f2cccc !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #db0000 !important;
+  --color-error-dark-foreground: #700000 !important;
+  --color-error-inverse: #fff !important;
+  --color-error-text: #700000 !important;
+  --color-warning: #f2b100 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #fef7e6 !important;
+  --color-warning-border: #f9dfa3 !important;
+  --color-warning-foreground: #f2b100 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #006ce0 !important;
+  --color-info-dark: #002a66 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #ebf3fc !important;
+  --color-info-border: #b3d1f0 !important;
+  --color-info-foreground: #006ce0 !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #fff !important;
+  --color-overlay: #00000080 !important;
+  --color-shadow: #00000014 !important;
+  --color-hover: #0000000d !important;
+  --color-tooltip-bg: #000000d9 !important;
+  --color-tooltip-text: #fff !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #db0000 !important;
+  --color-voice-red-dark: #700000 !important;
+  --color-voice-amber: #f2b100 !important;
+  --color-voice-purple-glow: #4200db66 !important;
+  --color-voice-red-glow: #db000066 !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px #0000000d !important;
+  --shadow-md: 0 4px 12px #00000014 !important;
+  --shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
+  --color-success-bg-solid: #d9ffd6 !important;
+  --color-error-bg-solid: #ffe0e0 !important;
+  --color-error-border-solid: #ffe0e0 !important;
+  --color-warning-bg-solid: #fffbbd !important;
+  --color-warning-text: #573a00 !important;
+  --color-info-bg-solid: #d1f1ff !important;
+  --color-info-bg-solid-alt: #d1f1ff !important;
+  --color-info-text: #002a66 !important;
+  --color-info-text-alt: #002a66 !important;
+  --color-emerald: #10b981 !important;
+  --color-teal: #4ecdc4 !important;
+  --color-code-bg: #f3f3f7 !important;
+  --color-code-header-bg: #f1f3f5 !important;
+  --color-code-text: #24292e !important;
+  --color-code-border: #e1e4e8 !important;
+  --color-code-muted: #6a737d !important;
+  --color-inline-code-bg: #f3f3f7 !important;
+  --color-inline-code-text: #24292e !important;
+  --color-inline-code-border: #e1e4e8 !important;
+  --color-scrollbar-thumb: #d1d5db !important;
+  --color-scrollbar-track: transparent !important;
+  --color-graph-node-text: #333 !important;
+  --color-graph-node-text-dim: #7f8c8d !important;
+  --color-graph-edge-default: #95a5a6 !important;
+  --color-graph-edge-cross: #e67e22 !important;
+  --color-graph-edge-text: #666 !important;
+  --color-graph-edge-stroke: #fff !important;
+  --color-graph-highlight-bg: #ff6b6b !important;
+  --color-graph-highlight-border: #e74c3c !important;
+  --color-graph-search-bg: gold !important;
+  --color-graph-search-border: orange !important;
+  --color-graph-focus-border: #c0392b !important;
+  --color-graph-external-border: #95a5a6 !important;
+  --color-graph-selected-border: #4200db !important;
+  --qs-data-cat-01: #4338ca !important;
+  --qs-data-cat-02: #d97706 !important;
+  --qs-data-cat-03: #0891b2 !important;
+  --qs-data-cat-04: #8b5cf6 !important;
+  --qs-data-cat-05: #15803d !important;
+  --qs-data-cat-06: #0c4a6e !important;
+  --qs-data-cat-07: #d946ef !important;
+  --qs-data-cat-08: #65a30d !important;
+  --qs-data-cat-09: #1d4ed8 !important;
+  --qs-data-cat-10: #831843 !important;
+  --qs-data-cat-11: #c2410c !important;
+  --qs-data-cat-12: #115e59 !important;
+  --qs-data-cat-other: #737373 !important;
+  --color-graph-cat-person: #4338ca !important;
+  --color-graph-cat-module: #4338ca !important;
+  --color-graph-cat-organization: #d97706 !important;
+  --color-graph-cat-org: #d97706 !important;
+  --color-graph-cat-variable: #d97706 !important;
+  --color-graph-cat-column: #d97706 !important;
+  --color-graph-cat-project: #0891b2 !important;
+  --color-graph-cat-sheet: #0891b2 !important;
+  --color-graph-cat-url: #0891b2 !important;
+  --color-graph-cat-product: #8b5cf6 !important;
+  --color-graph-cat-class: #8b5cf6 !important;
+  --color-graph-cat-dashboard: #8b5cf6 !important;
+  --color-graph-cat-place: #15803d !important;
+  --color-graph-cat-location: #15803d !important;
+  --color-graph-cat-function: #15803d !important;
+  --color-graph-cat-event: #0c4a6e !important;
+  --color-graph-cat-date: #0c4a6e !important;
+  --color-graph-cat-service: #0c4a6e !important;
+  --color-graph-cat-creativework: #d946ef !important;
+  --color-graph-cat-doc: #d946ef !important;
+  --color-graph-cat-message: #65a30d !important;
+  --color-graph-cat-channel: #65a30d !important;
+  --color-graph-cat-email: #65a30d !important;
+  --color-graph-cat-visual: #65a30d !important;
+  --color-graph-cat-file: #1d4ed8 !important;
+  --color-graph-cat-file-aggregate: #1d4ed8 !important;
+  --color-graph-cat-code: #1d4ed8 !important;
+  --color-graph-cat-decision: #831843 !important;
+  --color-graph-cat-action: #831843 !important;
+  --color-graph-cat-observation: #831843 !important;
+  --color-graph-cat-metric: #831843 !important;
+  --color-graph-cat-topic: #c2410c !important;
+  --color-graph-cat-concept: #c2410c !important;
+  --color-graph-cat-definedterm: #c2410c !important;
+  --color-graph-cat-instruction: #c2410c !important;
+  --color-graph-cat-import: #c2410c !important;
+  --color-graph-cat-dataset: #115e59 !important;
+  --color-graph-cat-occupation: #115e59 !important;
+  --color-graph-cat-method: #115e59 !important;
+  --color-graph-cat-folder: #737373 !important;
+  --color-graph-cat-unknown: #737373 !important;
+  --color-graph-rel-contains: #bdc3c7 !important;
+  --color-graph-rel-extends: #9b59b6 !important;
+  --color-graph-rel-implements: #3498db !important;
+  --color-graph-rel-imports: #e67e22 !important;
+  --color-graph-rel-uses: #2ecc71 !important;
+  --color-graph-rel-calls: #27ae60 !important;
+  --color-graph-rel-references: #f39c12 !important;
+  --color-graph-rel-related-to: #95a5a6 !important;
+  --color-graph-rel-works-on: #e74c3c !important;
+  --color-graph-rel-owns: #1abc9c !important;
+  --color-graph-rel-depends-on: #e67e22 !important;
+  --color-graph-rel-parent-of: #bdc3c7 !important;
+  --qs-content: #fff !important;
+  --qs-main: #fff !important;
+  --qs-primary-foreground: #131920 !important;
+  --qs-secondary-foreground: #656871 !important;
+  --qs-tertiary-foreground: #656871 !important;
+  --qs-placeholder-foreground: #656871 !important;
+  --qs-divider: #dedee3 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #b4b4bb !important;
+  --qs-neutral-gray-50: #f9fafb !important;
+  --qs-tertiary-background: #f9fafb !important;
+  --qs-action-hover: #f3f3f7 !important;
+  --qs-primary-default: #4200db !important;
+  --qs-primary-dark: #35009e !important;
+  --qs-primary-light: #e8e6ff !important;
+  --qs-primary-inverse: #fff !important;
+  --qs-success-default: #00802f !important;
+  --qs-success-dark: #00471e !important;
+  --qs-error-default: #db0000 !important;
+  --qs-warning-default: #f2b100 !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --safe-top: 0px !important;
+  --safe-bottom: 0px !important;
+  --safe-left: 0px !important;
+  --safe-right: 0px !important;
+  --qs-action-active: #e8e6ff !important;
+  --qs-action-disabled: #f3f3f7 !important;
+  --qs-active-border: #4200db !important;
+  --qs-application-navbar: #4200db !important;
+  --qs-application-navbar-dark: #35009e !important;
+  --qs-application-navbar-foreground: #fff !important;
+  --qs-application-navbar-light: #e8e6ff !important;
+  --qs-automation-dark: #660052 !important;
+  --qs-automation-default: #d600ba !important;
+  --qs-automation-light: #ffe0fb !important;
+  --qs-automation-medium: #b3008f !important;
+  --qs-automation-soft: #ff94f1 !important;
+  --qs-avatar-blue-bg: #d1f1ff !important;
+  --qs-avatar-blue-fg: #002a66 !important;
+  --qs-avatar-fuchsia-bg: #fce6ff !important;
+  --qs-avatar-fuchsia-fg: #590066 !important;
+  --qs-avatar-green-bg: #d9ffd6 !important;
+  --qs-avatar-green-fg: #00471e !important;
+  --qs-avatar-neutral-bg: #dedee3 !important;
+  --qs-avatar-neutral-fg: #131920 !important;
+  --qs-avatar-orange-bg: #ffe0d6 !important;
+  --qs-avatar-orange-fg: #661800 !important;
+  --qs-avatar-pink-bg: #ffe0fb !important;
+  --qs-avatar-pink-fg: #660052 !important;
+  --qs-avatar-primary-bg: #e8e6ff !important;
+  --qs-avatar-primary-fg: #35009e !important;
+  --qs-avatar-red-bg: #ffe0e0 !important;
+  --qs-avatar-red-fg: #700000 !important;
+  --qs-avatar-violet-bg: #f2e5ff !important;
+  --qs-avatar-violet-fg: #45008a !important;
+  --qs-avatar-yellow-bg: #fffbbd !important;
+  --qs-avatar-yellow-fg: #573a00 !important;
+  --qs-brand: #fff !important;
+  --qs-brand-foreground: #131920 !important;
+  --qs-brand-navbar: #131920 !important;
+  --qs-brand-navbar-dark: #000 !important;
+  --qs-brand-navbar-foreground: #fff !important;
+  --qs-brand-navbar-light: #dedee3 !important;
+  --qs-coachmark: #006ce0 !important;
+  --qs-connection-dark: #661800 !important;
+  --qs-connection-default: #db3300 !important;
+  --qs-connection-light: #ffe0d6 !important;
+  --qs-connection-soft: #ff997a !important;
+  --qs-content-inverse: #333843 !important;
+  --qs-content-inverse-active: #131920 !important;
+  --qs-contrast-foreground: #131920 !important;
+  --qs-data-categorical-01: #4338ca !important;
+  --qs-data-categorical-02: #d97706 !important;
+  --qs-data-categorical-03: #0891b2 !important;
+  --qs-data-categorical-04: #8b5cf6 !important;
+  --qs-data-categorical-05: #15803d !important;
+  --qs-data-categorical-06: #0c4a6e !important;
+  --qs-data-categorical-07: #d946ef !important;
+  --qs-data-categorical-08: #65a30d !important;
+  --qs-data-categorical-09: #1d4ed8 !important;
+  --qs-data-categorical-10: #831843 !important;
+  --qs-data-categorical-11: #c2410c !important;
+  --qs-data-categorical-12: #115e59 !important;
+  --qs-data-categorical-other: #737373 !important;
+  --qs-data-divergent-negative: #ea580c !important;
+  --qs-data-divergent-positive: #4f46e5 !important;
+  --qs-data-divergent-red-green-negative: #dc2626 !important;
+  --qs-data-divergent-red-green-positive: #16a34a !important;
+  --qs-data-missing: #d4d4d4 !important;
+  --qs-data-sentiment-neutral: #737373 !important;
+  --qs-data-sentiment-warning: #9e6900 !important;
+  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
+  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
+  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
+  --qs-default-badge: #b4b4bb !important;
+  --qs-default-badge-dot: #656871 !important;
+  --qs-dimension: #4200db !important;
+  --qs-dimension-experimental: #4200db !important;
+  --qs-dimension-experimental-foreground: #4200db !important;
+  --qs-dimension-foreground: #fff !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #dedee3 !important;
+  --qs-disabled-foreground: #b4b4bb !important;
+  --qs-divider-light: #f3f3f7 !important;
+  --qs-error-active-border: #db0000 !important;
+  --qs-error-border: #ffe0e0 !important;
+  --qs-error-dark: #700000 !important;
+  --qs-error-foreground: #db0000 !important;
+  --qs-error-inverse: #fff !important;
+  --qs-error-light: #ffe0e0 !important;
+  --qs-error-medium: #900 !important;
+  --qs-error-soft: #ff9e9e !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
+  --qs-hover-border: #333843 !important;
+  --qs-info-dark: #002a66 !important;
+  --qs-info-default: #006ce0 !important;
+  --qs-info-inverse: #fff !important;
+  --qs-info-light: #d1f1ff !important;
+  --qs-info-medium: #003b8f !important;
+  --qs-info-soft: #75cfff !important;
+  --qs-insight-dark: #590066 !important;
+  --qs-insight-default: #a000b8 !important;
+  --qs-insight-light: #fce6ff !important;
+  --qs-insight-soft: #f299ff !important;
+  --qs-main-foreground: #131920 !important;
+  --qs-main-secondary-foreground: #656871 !important;
+  --qs-measure: #00802f !important;
+  --qs-measure-experimental: #f2b100 !important;
+  --qs-measure-experimental-foreground: #f2b100 !important;
+  --qs-measure-foreground: #fff !important;
+  --qs-neutral-black: #000 !important;
+  --qs-neutral-dark: #333843 !important;
+  --qs-neutral-deep: #656871 !important;
+  --qs-neutral-default: #dedee3 !important;
+  --qs-neutral-light: #f3f3f7 !important;
+  --qs-neutral-lightest: #f9f9fb !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #131920 !important;
+  --qs-neutral-white: #fff !important;
+  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
+  --qs-primary-inverse-foreground: #fff !important;
+  --qs-primary-medium: #8575ff !important;
+  --qs-primary-soft: #b2a8ff !important;
+  --qs-secondary: #dedee3 !important;
+  --qs-secondary-dark: #b4b4bb !important;
+  --qs-secondary-light: #f3f3f7 !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-inverse: #fff !important;
+  --qs-success-light: #d9ffd6 !important;
+  --qs-success-medium: #005c26 !important;
+  --qs-success-soft: #aeffa8 !important;
+  --qs-tag-default: #dedee3 !important;
+  --qs-tag-soft-border: #b4b4bb !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #45008a !important;
+  --qs-visualization-default: #7300e5 !important;
+  --qs-visualization-light: #f2e5ff !important;
+  --qs-visualization-soft: #d4a8ff !important;
+  --qs-warning-dark: #573a00 !important;
+  --qs-warning-experimental: #f2b100 !important;
+  --qs-warning-experimental-light: #fffbbd !important;
+  --qs-warning-experimental-light-foreground: #fffbbd !important;
+  --qs-warning-inverse: #573a00 !important;
+  --qs-warning-light: #fffbbd !important;
+  --qs-warning-medium: #db9200 !important;
+  --qs-warning-soft: #ffed4d !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --z-subtask-modal: 10000 !important;
+  --z-above-subtask-modal: 10001 !important;
+}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AWS × SRA Retail AI Playground</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#121a30; --panel:#16203a; --panel2:#1d2a48;
+    --ink:#eef2fb; --ink2:#9fb0cf; --muted:#6b7ca0;
+    --line:rgba(255,255,255,0.08); --line2:rgba(255,255,255,0.14);
+    --aws:#ff9900; --aws2:#ffb84d; --sra:#2bd4c4; --sra2:#6ef0e3;
+    --good:#36d399; --warn:#fbbd23; --err:#f87272; --info:#60a5fa;
+    --r:14px; --rs:9px;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'SF Mono',Monaco,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(255,153,0,0.10), transparent 60%),
+      radial-gradient(1000px 500px at 0% 0%, rgba(43,212,196,0.10), transparent 55%),
+      var(--bg);
+    color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;}
+
+  .mock-tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--warn);border:1px solid var(--warn);border-radius:999px;padding:4px 10px;background:rgba(251,189,35,0.08);white-space:nowrap}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.2px}
+  .brand .logo{display:flex;align-items:center;gap:9px;font-size:15px}
+  .brand .aws{color:var(--aws)} .brand .sra{color:var(--sra)} .brand .x{color:var(--muted);font-weight:500}
+  .pill{font-size:11px;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:5px 12px;background:rgba(255,255,255,0.03)}
+
+  /* ---------- VIEW SWITCHING ---------- */
+  .view{display:none}
+  .view.active{display:block;animation:fade .3s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* ---------- LANDING ---------- */
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 24px 64px}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
+  .hero{background:linear-gradient(135deg, rgba(255,153,0,0.08), rgba(43,212,196,0.06)), var(--panel);
+    border:1px solid var(--line);border-radius:var(--r);padding:38px 36px;margin-bottom:30px}
+  .hero h1{margin:0 0 10px;font-size:34px;line-height:1.12;letter-spacing:-0.5px}
+  .hero h1 .grad{background:linear-gradient(90deg,var(--aws),var(--sra));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p{margin:0;max-width:720px;color:var(--ink2);font-size:15.5px}
+  .hero .flow{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .hero .step{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,0.04);border:1px solid var(--line2);border-radius:999px;padding:8px 15px;font-size:13px}
+  .hero .step .n{width:20px;height:20px;border-radius:50%;background:var(--aws);color:#1a1200;font-weight:800;font-size:11px;display:grid;place-items:center}
+  .hero .arrow{color:var(--muted);align-self:center}
+
+  .sec-h{display:flex;align-items:baseline;justify-content:space-between;margin:0 4px 16px}
+  .sec-h h2{font-size:18px;margin:0}.sec-h span{font-size:12.5px;color:var(--muted)}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.cards{grid-template-columns:1fr}}
+  .uc-card{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,153,0,0.25);background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:all .16s ease;position:relative;overflow:hidden}
+  .uc-card:hover{transform:translateY(-3px);border-color:var(--aws);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .uc-card .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:20px;background:rgba(255,153,0,0.14);color:var(--aws);border:1px solid rgba(255,153,0,0.3);margin-bottom:14px}
+  .uc-card.newish .ico{background:rgba(43,212,196,0.14);color:var(--sra);border-color:rgba(43,212,196,0.3)}
+  .uc-card h3{margin:0 0 7px;font-size:16px}
+  .uc-card p{margin:0;font-size:13px;color:var(--ink2)}
+  .uc-card .go{margin-top:14px;font-size:12.5px;color:var(--aws2);font-weight:600;display:flex;align-items:center;gap:7px}
+  .uc-card .newbadge{position:absolute;top:14px;right:14px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--sra2);background:rgba(43,212,196,0.12);border:1px solid rgba(43,212,196,0.3);border-radius:999px;padding:3px 8px;font-weight:700}
+
+  /* model strip */
+  .model{margin-top:40px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:30px 32px}
+  .model h2{margin:0 0 6px;font-size:19px}.model .sub{color:var(--ink2);font-size:13.5px;margin-bottom:22px}
+  .journey{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:860px){.journey{grid-template-columns:1fr 1fr}}
+  .jstep{background:var(--bg2);border:1px solid var(--line);border-radius:var(--rs);padding:17px;position:relative}
+  .jstep .num{font-family:var(--mono);font-size:12px;color:var(--aws);font-weight:700}
+  .jstep h4{margin:7px 0 6px;font-size:14.5px}.jstep p{margin:0;font-size:12.5px;color:var(--ink2)}
+  .jstep .ar{position:absolute;right:-11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px}
+  @media(max-width:860px){.jstep .ar{display:none}}
+  .foot{margin-top:30px;text-align:center;color:var(--muted);font-size:11.5px;line-height:1.7}.foot b{color:var(--ink2)}
+
+  /* ---------- DETAIL (full page w/ sidebar) ---------- */
+  .detail-shell{display:grid;grid-template-columns:270px 1fr;min-height:100vh}
+  @media(max-width:820px){.detail-shell{grid-template-columns:1fr}}
+  .side{background:var(--bg2);border-right:1px solid var(--line);padding:22px 16px;display:flex;flex-direction:column;gap:6px}
+  @media(max-width:820px){.side{border-right:none;border-bottom:1px solid var(--line)}}
+  .side .back{display:flex;align-items:center;gap:9px;cursor:pointer;color:var(--ink2);font-size:13px;font-weight:600;padding:10px 12px;border:1px solid var(--line2);border-radius:var(--rs);margin-bottom:12px;transition:all .14s;background:transparent}
+  .side .back:hover{border-color:var(--aws);color:#fff}
+  .side .sideL{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:6px 12px;margin-top:4px}
+  .navitem{display:flex;align-items:center;gap:11px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,153,0,0.25);padding:11px 12px;border-radius:var(--rs);color:var(--ink2);font-size:13.5px;font-weight:500;border:1px solid transparent;transition:all .13s}
+  .navitem i{width:18px;text-align:center;font-size:14px}
+  .navitem:hover{background:rgba(255,255,255,0.04);color:var(--ink)}
+  .navitem.active{background:linear-gradient(135deg,rgba(255,153,0,0.16),rgba(43,212,196,0.1));border-color:var(--aws);color:#fff}
+  .navitem.active i{color:var(--aws)}
+  .navitem .nb{margin-left:auto;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sra2);background:rgba(43,212,196,0.14);border-radius:999px;padding:2px 6px;font-weight:700}
+
+  .detail-main{padding:26px 34px 60px;max-width:960px}
+  .detail-top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:22px}
+
+  .sb-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px}
+  .sb-ico{width:52px;height:52px;flex:none;border-radius:13px;display:grid;place-items:center;font-size:23px;background:rgba(255,153,0,0.14);color:var(--aws);border:1px solid rgba(255,153,0,0.3)}
+  .sb-head h2{margin:0 0 5px;font-size:22px}
+  .sb-head p{margin:0;color:var(--ink2);font-size:14px;max-width:720px}
+  .sb-pain{margin-top:10px;display:inline-flex;align-items:center;gap:7px;font-size:11.5px;color:var(--sra2);background:rgba(43,212,196,0.1);border:1px solid rgba(43,212,196,0.28);border-radius:999px;padding:4px 11px}
+
+  .panelcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .sb-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  @media(max-width:760px){.sb-body{grid-template-columns:1fr}}
+  .sb-col{padding:24px 26px}
+  .sb-col.left{border-right:1px solid var(--line)}
+  @media(max-width:760px){.sb-col.left{border-right:none;border-bottom:1px solid var(--line)}}
+  .col-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:12.5px;color:var(--ink2);margin-bottom:7px}
+  .field select,.field input[type=text]{width:100%;background:var(--bg2);border:1px solid var(--line2);color:var(--ink);border-radius:var(--rs);padding:11px 13px;font-size:13.5px;font-family:var(--sans)}
+  .field input[type=range]{width:100%;accent-color:var(--aws)}
+  .rangeval{font-family:var(--mono);color:var(--aws2);font-size:13px;float:right}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{cursor:pointer;font-size:12px;border:1px solid var(--line2);border-radius:999px;padding:6px 12px;color:var(--ink2);user-select:none;transition:all .12s}
+  .chip:hover{border-color:var(--aws)} .chip.on{background:var(--aws);border-color:var(--aws);color:#1a1200;font-weight:700}
+
+  /* upload dropzone */
+  .drop{border:1.5px dashed var(--line2);border-radius:var(--rs);padding:22px;text-align:center;cursor:pointer;transition:all .15s;background:var(--bg2)}
+  .drop:hover{border-color:var(--aws);background:rgba(255,153,0,0.04)}
+  .drop i{font-size:26px;color:var(--aws);display:block;margin-bottom:9px}
+  .drop .t{font-size:13px;color:var(--ink)} .drop .s{font-size:11.5px;color:var(--muted);margin-top:3px}
+  .drop.sel{border-color:var(--sra);border-style:solid;background:rgba(43,212,196,0.05)}
+  .drop.sel i{color:var(--sra)}
+  .samples{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  .sample{cursor:pointer;font-size:30px;line-height:1;padding:9px;border:1px solid var(--line2);border-radius:10px;background:var(--bg2);transition:all .12s}
+  .sample:hover{border-color:var(--aws)} .sample.on{border-color:var(--aws);box-shadow:0 0 0 1px var(--aws) inset}
+
+  .run{width:100%;margin-top:4px;cursor:pointer;border:none;border-radius:var(--rs);padding:13px;font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--aws),var(--aws2));color:#1a1200;transition:filter .15s,transform .1s}
+  .run:hover{filter:brightness(1.07)} .run:active{transform:scale(.99)} .run i{margin-right:8px}
+
+  .out{min-height:240px}
+  .out .placeholder{color:var(--muted);font-size:13px;text-align:center;padding:64px 20px}
+  .out .placeholder i{font-size:30px;display:block;margin-bottom:12px;opacity:.5}
+  .thinking{display:flex;align-items:center;gap:10px;color:var(--aws2);font-size:13px;padding:20px 4px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--aws);animation:pulse 1s infinite}
+  .dot:nth-child(2){animation-delay:.15s}.dot:nth-child(3){animation-delay:.3s}
+  @keyframes pulse{0%,100%{opacity:.25}50%{opacity:1}}
+  .result{animation:fade .4s ease both}
+  .metric-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+  .metric{flex:1;min-width:120px;background:var(--bg2);border:1px solid var(--line);border-radius:var(--rs);padding:13px 15px}
+  .metric .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .metric .v{font-size:23px;font-weight:700;font-family:var(--mono);margin-top:3px}
+  .metric .v.good{color:var(--good)} .metric .v.aws{color:var(--aws2)} .metric .v.info{color:var(--info)} .metric .v.err{color:var(--err)}
+  .metric .d{font-size:11.5px;color:var(--ink2);margin-top:2px}
+  .bars{margin:6px 0 14px}
+  .bar{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12.5px}
+  .bar .lab{width:120px;flex:none;color:var(--ink2)}
+  .bar .track{flex:1;height:9px;background:var(--bg2);border-radius:999px;overflow:hidden}
+  .bar .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--aws),var(--aws2));width:0;transition:width .9s cubic-bezier(.2,.7,.3,1)}
+  .bar .fill.sra{background:linear-gradient(90deg,var(--sra),var(--sra2))}
+  .bar .pct{width:52px;text-align:right;font-family:var(--mono);color:var(--ink)}
+  .insight{background:rgba(43,212,196,0.07);border:1px solid rgba(43,212,196,0.22);border-radius:var(--rs);padding:13px 15px;font-size:13px;color:var(--ink);margin-bottom:14px}
+  .insight b{color:var(--sra2)}
+  .chatline{display:flex;gap:10px;margin-bottom:11px;font-size:13.5px}
+  .chatline .av{width:28px;height:28px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}
+  .chatline.u .av{background:var(--panel2);color:var(--ink2)}.chatline.a .av{background:var(--aws);color:#1a1200}
+  .chatline .msg{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px 13px;max-width:92%}
+  .chatline.a .msg{background:rgba(255,153,0,0.07);border-color:rgba(255,153,0,0.22)}
+  .tag{display:inline-block;font-size:10.5px;padding:2px 8px;border-radius:999px;background:var(--panel2);color:var(--ink2);margin:2px 4px 2px 0}
+  .tag.good{background:rgba(54,211,153,0.14);color:var(--good)}.tag.warn{background:rgba(251,189,35,0.14);color:var(--warn)}.tag.err{background:rgba(248,114,114,0.16);color:var(--err)}
+
+  /* detection list (inventory / safety) */
+  .scene{position:relative;background:var(--bg2);border:1px solid var(--line2);border-radius:10px;height:150px;display:grid;place-items:center;font-size:52px;margin-bottom:14px;overflow:hidden}
+  .scene .box{position:absolute;border:2px solid var(--aws);border-radius:4px;font-size:9px;color:#1a1200;background:var(--aws);padding:0 4px;font-weight:700;font-family:var(--mono)}
+  .scene .box.g{border-color:var(--good);background:var(--good)}
+  .scene .box.r{border-color:var(--err);background:var(--err);color:#fff}
+  .det{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--bg2);border:1px solid var(--line);border-radius:var(--rs);margin-bottom:7px;font-size:13px}
+  .det .nm{display:flex;align-items:center;gap:9px}.det .nm .e{font-size:17px}
+  .det .q{font-family:var(--mono);color:var(--aws2);font-weight:700}
+  .det .cf{font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+  .scale{border-top:1px dashed var(--line2);padding:18px 26px;background:linear-gradient(90deg,rgba(255,153,0,0.06),transparent);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .scale .txt{font-size:13px;color:var(--ink2);max-width:620px}.scale .txt b{color:var(--ink)}
+  .scale button{cursor:pointer;white-space:nowrap;border:1px solid var(--sra);color:var(--sra2);background:rgba(43,212,196,0.08);border-radius:var(--rs);padding:11px 18px;font-size:13px;font-weight:700;transition:all .15s}
+  .scale button:hover{background:var(--sra);color:#06201d} .scale button i{margin-right:7px}
+
+  /* modal */
+  .modal-bg{position:fixed;inset:0;background:rgba(5,8,16,.72);display:none;place-items:center;z-index:50;padding:24px}
+  .modal-bg.open{display:grid;animation:fade .2s ease both}
+  .modal{background:var(--panel);border:1px solid var(--line2);border-radius:var(--r);max-width:520px;width:100%;padding:28px}
+  .modal h3{margin:0 0 6px;font-size:18px}.modal h3 i{color:var(--sra)}
+  .modal p{color:var(--ink2);font-size:13.5px}.modal ul{color:var(--ink2);font-size:13px;padding-left:18px;margin:10px 0}.modal ul li{margin-bottom:6px}
+  .modal .close{margin-top:14px;cursor:pointer;border:none;background:var(--aws);color:#1a1200;font-weight:700;border-radius:var(--rs);padding:11px 18px;font-size:13px;width:100%}
+  .privacy{font-size:11.5px;color:var(--warn);background:rgba(251,189,35,0.08);border:1px solid var(--warn);border-radius:var(--rs);padding:10px 13px;margin-bottom:14px}
+  .privacy i{margin-right:6px}
+
+  /* ===== MOBILE (phones) ===== */
+  @media(max-width:600px){
+    .wrap{padding:18px 15px 48px}
+    .topbar{flex-wrap:wrap;gap:10px}
+    .hero{padding:26px 20px}
+    .hero h1{font-size:25px}
+    .hero p{font-size:14px}
+    .hero .flow{gap:7px}
+    .hero .step{font-size:12px;padding:7px 11px}
+    .hero .arrow{display:none}
+    .sec-h{flex-direction:column;gap:3px;margin-bottom:13px}
+    .sec-h h2{font-size:16px}
+    .cards{grid-template-columns:1fr;gap:12px}
+    .uc-card{padding:18px}
+    .model{padding:22px 18px}
+    .journey{grid-template-columns:1fr;gap:10px}
+    .jstep .ar{display:none}
+
+    /* detail: sidebar becomes a horizontal scroll strip on top */
+    .detail-shell{grid-template-columns:1fr}
+    .side{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:12px;-webkit-overflow-scrolling:touch;position:sticky;top:0;z-index:5;background:var(--bg2)}
+    .side .brand{display:none}
+    .side .sideL{display:none}
+    .side .back{margin-bottom:0;flex:none;white-space:nowrap}
+    #navlist{display:flex;gap:8px}
+    .navitem{white-space:nowrap;flex:none;padding:10px 13px}
+    .navitem .nb{display:none}
+    .detail-main{padding:20px 16px 48px}
+    .detail-top{flex-wrap:wrap;gap:8px}
+
+    .sb-head{gap:12px}
+    .sb-ico{width:44px;height:44px;font-size:20px}
+    .sb-head h2{font-size:18px}
+    .sb-head p{font-size:13px}
+
+    /* stack the two-column sandbox */
+    .sb-body{grid-template-columns:1fr}
+    .sb-col.left{border-right:none;border-bottom:1px solid var(--line)}
+    .sb-col{padding:20px 18px}
+
+    /* comfortable tap targets */
+    .run{padding:15px;font-size:15px}
+    .chip{padding:9px 14px;font-size:12.5px}
+    .sample{font-size:34px;padding:12px}
+    .tab{padding:12px 15px}
+    .scale{padding:16px 18px}
+    .scale button{width:100%;padding:14px}
+    .metric{min-width:100%}
+    .bar .lab{width:82px}
+    .modal{padding:22px}
+  }
+  /* avoid iOS auto-zoom on focus: inputs >=16px on small screens */
+  @media(max-width:600px){
+    .field select,.field input[type=text]{font-size:16px}
+  }
+
+  /* touch devices: no sticky hover transforms, ensure taps register */
+  @media(hover:none){
+    .uc-card:hover{transform:none}
+    .uc-card:active{transform:scale(.99);border-color:var(--aws)}
+    .navitem:active{background:rgba(255,153,0,0.12)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ LANDING VIEW ============ -->
+<div class="view active" id="view-home">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="logo"><i class="fa-brands fa-aws aws" style="font-size:22px"></i><span class="aws">AWS</span><span class="x">×</span><span class="sra">SRA</span></span><span class="pill">Retail AI Playground</span></div>
+      <span class="mock-tag"><i class="fa-solid fa-flask"></i> Concept Mock · Simulated</span>
+    </div>
+
+    <div class="hero">
+      <h1>The <span class="grad">Retail AI Playground</span></h1>
+      <p>A hands-on sandbox where Singapore retailers try real AI use cases on their own terms — no slides, no commitment. Explore, test with sample data, and when something clicks, scale it into your own AWS environment with AWS and our partner ecosystem behind you.</p>
+      <div class="flow">
+        <div class="step"><span class="n">1</span> Explore use cases</div><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="step"><span class="n">2</span> Test in the sandbox</div><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="step"><span class="n">3</span> Scale in your own environment</div><span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        <div class="step"><span class="n">4</span> Grow with AWS + SRA</div>
+      </div>
+    </div>
+
+    <div class="sec-h"><h2>Choose a use case to explore</h2><span>7 interactive sandboxes · click any card to open it</span></div>
+    <div class="cards" id="cards"><!-- injected --></div>
+
+    <div class="model">
+      <h2>How the Playground supports Singapore retailers to scale effectively with AI</h2>
+      <div class="sub">A tangible, members-first initiative — hands-on AI value for SRA’s retail community.</div>
+      <div class="journey">
+        <div class="jstep"><div class="num">01</div><h4>Play</h4><p>Members explore &amp; test AI use cases hands-on — learning, not selling.</p><span class="ar"><i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="jstep"><div class="num">02</div><h4>Pilot</h4><p>Keen retailers run a scoped pilot on their own data, guided by AWS + ISV partners.</p><span class="ar"><i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="jstep"><div class="num">03</div><h4>Scale</h4><p>Proven use cases build into the retailer's own AWS environment — real pipeline.</p><span class="ar"><i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="jstep"><div class="num">04</div><h4>Grow</h4><p>AWS &amp; SRA grow the programme together — more use cases, more members, more retailers scaling on AWS.</p></div>
+      </div>
+    </div>
+    <div class="foot"><b>AWS × SRA Retail AI Playground</b> — concept mock for SRA board presentation. All demos use simulated sample data for illustration only.<br>Prepared for the Singapore Retailers Association board · AWS Singapore RCTL · October 2026</div>
+  </div>
+</div>
+
+<!-- ============ DETAIL VIEW ============ -->
+<div class="view" id="view-detail">
+  <div class="detail-shell">
+    <aside class="side">
+      <button class="back" onclick="goHome()"><i class="fa-solid fa-arrow-left"></i> Back to main</button>
+      <div class="brand" style="padding:4px 12px 10px"><span class="logo"><i class="fa-brands fa-aws aws"></i><span class="aws">AWS</span><span class="x">×</span><span class="sra">SRA</span></span></div>
+      <div class="sideL">Use cases</div>
+      <div id="navlist"><!-- injected --></div>
+    </aside>
+    <main class="detail-main">
+      <div class="detail-top">
+        <span class="pill">Retail AI Playground</span>
+        <span class="mock-tag"><i class="fa-solid fa-flask"></i> Concept Mock · Simulated</span>
+      </div>
+      <div id="detail-body"><!-- injected per use case --></div>
+    </main>
+  </div>
+</div>
+
+<!-- scale modal -->
+<div class="modal-bg" id="modal" onclick="if(event.target===this)closeScale()">
+  <div class="modal">
+    <h3><i class="fa-solid fa-rocket"></i> Scale “<span id="m-name">this use case</span>” in your own environment</h3>
+    <p>This is where play turns into production. A retailer who likes a sandbox demo moves to a scoped build in <b>their own AWS account</b>:</p>
+    <ul>
+      <li><b>Discovery</b> — AWS maps the use case to your data &amp; systems</li>
+      <li><b>Pilot</b> — a scoped proof-of-value on your real data</li>
+      <li><b>Partner match</b> — the right ISV from the AWS ecosystem joins the build</li>
+      <li><b>Scale</b> — deployed, owned, and running in your environment</li>
+    </ul>
+    <p style="color:var(--sra2)"><i class="fa-solid fa-circle-info"></i> In the live Playground, this would capture the retailer's interest and route it to the AWS × SRA team as a qualified lead.</p>
+    <button class="close" onclick="closeScale()">Got it</button>
+  </div>
+</div>
+
+<script>
+/* ---------------- USE CASE REGISTRY ---------------- */
+const USES = [
+  {id:'inventory', icon:'fa-boxes-stacked', title:'Smart Inventory', isNew:true,
+   blurb:'Upload a photo or video of a warehouse shelf — AI detects each item and counts quantity automatically, replacing manual stock-takes.',
+   pain:'“Stock-takes are manual, slow, and error-prone”',
+   scale:'Powered by Amazon Rekognition Custom Labels / Bedrock vision on your SKUs — deployed in your AWS account, trained to your products & packaging.'},
+  {id:'safety', icon:'fa-helmet-safety', title:'Staff Safety Monitoring', isNew:true,
+   blurb:'Computer vision on warehouse / back-of-house camera feeds flags safety-compliance issues — PPE, restricted zones, forklift–pedestrian proximity.',
+   pain:'“Safety incidents are caught too late, after the fact”',
+   scale:'Amazon Rekognition / Bedrock vision + real-time alerts in your AWS account. Configurable to your floor plan, zones and PPE policy.'},
+  {id:'forecast', icon:'fa-chart-line', title:'Demand Forecasting', isNew:false,
+   blurb:'Predict next month\u2019s demand by SKU so you stock the right products in the right stores — cutting stock-outs and dead inventory.',
+   pain:'“We over-order or run out — gut feel, not data”',
+   scale:'Trains on your POS history with Amazon Forecast / SageMaker — in your own AWS account, your data never leaves it.'},
+  {id:'assistant', icon:'fa-comments', title:'Shopping Assistant', isNew:false,
+   blurb:'A conversational GenAI agent that answers product questions, recommends items, and guides shoppers across web, app, and in-store kiosk.',
+   pain:'“We can\u2019t staff every channel, every hour”',
+   scale:'Grounded on your catalogue & policies with Amazon Bedrock Knowledge Bases + Agents — brand voice, guardrails, human handoff.'},
+  {id:'visual', icon:'fa-camera', title:'Visual & Shelf Intelligence', isNew:false,
+   blurb:'Shoppers search by image; ops teams get automated shelf checks for out-of-stock, misplaced items and planogram gaps.',
+   pain:'“Manual shelf audits are slow and patchy”',
+   scale:'Powered by AWS vision AI — integrated to your catalogue in your own AWS environment.'},
+  {id:'loyalty', icon:'fa-gift', title:'Personalisation & Loyalty', isNew:false,
+   blurb:'Turn transaction history into 1:1 offers and next-best-action nudges — lift repeat purchase and basket size.',
+   pain:'“Our promos are one-size-fits-all”',
+   scale:'Amazon Personalize on your CRM/POS data — in your own AWS account on your first-party data.'},
+  {id:'fraud', icon:'fa-shield-halved', title:'Trust & Fraud', isNew:false,
+   blurb:'Score transactions in real time to block fraud and chargebacks while letting genuine customers through.',
+   pain:'“Fraud & chargebacks are rising fast”',
+   scale:'Amazon Fraud Detector + real-time pipelines — in your own AWS account.'},
+];
+
+/* ---------------- BUILD LANDING CARDS ---------------- */
+document.getElementById('cards').innerHTML = USES.map(u=>`
+  <div class="uc-card ${u.isNew?'newish':''}" role="button" tabindex="0" data-uc="${u.id}">
+    ${u.isNew?'<span class="newbadge">New</span>':''}
+    <div class="ico"><i class="fa-solid ${u.icon}"></i></div>
+    <h3>${u.title}</h3><p>${u.blurb}</p>
+    <div class="go">Open sandbox <i class="fa-solid fa-arrow-right"></i></div>
+  </div>`).join('');
+
+/* ---------------- BUILD SIDEBAR ---------------- */
+document.getElementById('navlist').innerHTML = USES.map(u=>`
+  <div class="navitem" id="nav-${u.id}" role="button" tabindex="0" data-uc="${u.id}">
+    <i class="fa-solid ${u.icon}"></i><span>${u.title}</span>${u.isNew?'<span class="nb">New</span>':''}
+  </div>`).join('');
+
+/* ---------------- VIEW ROUTING ---------------- */
+function resetScroll(){
+  try{window.scrollTo(0,0);}catch(e){}
+  try{document.documentElement.scrollTop=0;document.body.scrollTop=0;}catch(e){}
+  var dm=document.querySelector('.detail-main'); if(dm) dm.scrollTop=0;
+}
+function openUse(id){
+  try{
+    document.getElementById('view-home').classList.remove('active');
+    document.getElementById('view-detail').classList.add('active');
+    document.querySelectorAll('.navitem').forEach(n=>n.classList.remove('active'));
+    var nav=document.getElementById('nav-'+id); if(nav) nav.classList.add('active');
+    document.getElementById('detail-body').innerHTML = render(id);
+    bindDynamic(id);
+    resetScroll();
+  }catch(err){
+    document.getElementById('detail-body').innerHTML =
+      '<div style="padding:30px;color:#f87272">Could not open this use case. Please go back and try again.</div>';
+    console.error('openUse failed', err);
+  }
+}
+function goHome(){
+  document.getElementById('view-detail').classList.remove('active');
+  document.getElementById('view-home').classList.add('active');
+  resetScroll();
+}
+
+/* ---------------- DETAIL TEMPLATES ---------------- */
+function head(u){return `<div class="sb-head"><div class="sb-ico"><i class="fa-solid ${u.icon}"></i></div>
+  <div><h2>${u.title}</h2><p>${u.blurb}</p><span class="sb-pain"><i class="fa-solid fa-circle-dot"></i> Pain point: ${u.pain}</span></div></div>`;}
+function scaleBar(u){return `<div class="scale"><div class="txt"><b>Like what you see?</b> ${u.scale}</div>
+  <button onclick="openScale('${u.title.replace(/'/g,"")}')"><i class="fa-solid fa-rocket"></i>Scale in your own environment</button></div>`;}
+
+function render(id){
+  const u=USES.find(x=>x.id===id);
+  let body='';
+  if(id==='inventory') body=`
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Upload warehouse / shelf media</div>
+      <div class="drop" id="inv-drop" onclick="selDrop('inv-drop')"><i class="fa-solid fa-cloud-arrow-up"></i><div class="t">Drop a shelf photo or video</div><div class="s">JPG / PNG / MP4 · or pick a sample below</div></div>
+      <div class="samples" id="inv-samples">
+        <div class="sample on" data-s="shelf">🗄️</div><div class="sample" data-s="pallet">📦</div><div class="sample" data-s="fridge">🧊</div><div class="sample" data-s="rack">🛒</div></div>
+      <div class="field" style="margin-top:16px"><label>Analysis mode</label>
+        <select id="inv-mode"><option value="count">Item detection + quantity count</option><option value="gap">Stock-gap / replenishment check</option></select></div>
+      <button class="run" onclick="runInventory()"><i class="fa-solid fa-boxes-stacked"></i>Analyse shelf</button>
+    </div><div class="sb-col out" id="out-inventory">
+      <div class="placeholder"><i class="fa-solid fa-boxes-stacked"></i>Upload or pick a sample, then analyse.</div></div></div>`;
+  else if(id==='safety') body=`
+    <div class="privacy"><i class="fa-solid fa-user-shield"></i><b>Privacy-by-design:</b> this demo reports <b>aggregate safety-compliance</b> events, not individual identity tracking — framed for worker trust and board comfort.</div>
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Camera feed + checks</div>
+      <div class="drop" id="saf-drop" onclick="selDrop('saf-drop')"><i class="fa-solid fa-video"></i><div class="t">Drop a camera clip</div><div class="s">MP4 · or pick a sample scene</div></div>
+      <div class="samples" id="saf-samples">
+        <div class="sample on" data-s="dock">🏭</div><div class="sample" data-s="aisle">🚶</div><div class="sample" data-s="forklift">🚜</div></div>
+      <div class="field" style="margin-top:16px"><label>Safety checks to run</label>
+        <div class="chips" id="saf-chips">
+          <span class="chip on" data-c="PPE / helmet & vest">PPE compliance</span>
+          <span class="chip on" data-c="Restricted-zone entry">Restricted zone</span>
+          <span class="chip" data-c="Forklift–pedestrian proximity">Forklift proximity</span>
+          <span class="chip" data-c="Slip / fall detection">Slip &amp; fall</span></div></div>
+      <button class="run" onclick="runSafety()"><i class="fa-solid fa-helmet-safety"></i>Run safety analysis</button>
+    </div><div class="sb-col out" id="out-safety">
+      <div class="placeholder"><i class="fa-solid fa-helmet-safety"></i>Pick a scene and checks, then run.</div></div></div>`;
+  else if(id==='forecast') body=`
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Your inputs</div>
+      <div class="field"><label>Product category</label><select id="f-cat"><option>Apparel & Fashion</option><option>Health & Beauty</option><option>F&B / Grocery</option><option>Electronics & Gadgets</option><option>Home & Living</option></select></div>
+      <div class="field"><label>Season / event <span class="rangeval" id="f-seasV">Year-End Sale</span></label><select id="f-seas"><option>Business as usual</option><option selected>Year-End Sale</option><option>Chinese New Year</option><option>Great Singapore Sale</option><option>Ramadan / Hari Raya</option></select></div>
+      <div class="field"><label>Sales volatility <span class="rangeval" id="f-volV">Medium</span></label><input type="range" id="f-vol" min="1" max="3" value="2"></div>
+      <div class="field"><label>Store locations <span class="rangeval" id="f-locV">12</span></label><input type="range" id="f-loc" min="1" max="40" value="12"></div>
+      <button class="run" onclick="runForecast()"><i class="fa-solid fa-bolt"></i>Generate forecast</button>
+    </div><div class="sb-col out" id="out-forecast"><div class="placeholder"><i class="fa-solid fa-chart-line"></i>Set inputs and generate a forecast.</div></div></div>`;
+  else if(id==='assistant') body=`
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Try a shopper question</div>
+      <div class="field"><label>Store persona</label><select id="a-persona"><option>Beauty & skincare retailer</option><option>Fashion boutique</option><option>Electronics store</option><option>Homeware & gifts</option></select></div>
+      <div class="field"><label>Sample question</label><div class="chips" id="a-chips">
+        <span class="chip on" data-q="I have oily skin and a $50 budget — what do you recommend?">Oily skin, $50</span>
+        <span class="chip" data-q="Do you have this in size M, and can I collect it today?">Size & pickup</span>
+        <span class="chip" data-q="What's a good gift for a 10-year-old who loves science?">Gift idea</span></div></div>
+      <div class="field"><label>Or type your own</label><input type="text" id="a-custom" placeholder="Ask the assistant anything…"></div>
+      <button class="run" onclick="runAssistant()"><i class="fa-solid fa-paper-plane"></i>Ask the assistant</button>
+    </div><div class="sb-col out" id="out-assistant"><div class="placeholder"><i class="fa-solid fa-comments"></i>Ask a question to see a response.</div></div></div>`;
+  else if(id==='visual') body=`
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Choose a mode</div>
+      <div class="field"><label>Capability</label><select id="v-mode"><option value="search">Shopper visual search</option><option value="shelf">Shelf / planogram audit</option></select></div>
+      <div class="field"><label>Sample image</label><div class="chips" id="v-chips">
+        <span class="chip on" data-img="👗">👗 Dress</span><span class="chip" data-img="👟">👟 Sneaker</span><span class="chip" data-img="🧴">🧴 Skincare</span><span class="chip" data-img="🪑">🪑 Furniture</span></div></div>
+      <button class="run" onclick="runVisual()"><i class="fa-solid fa-magnifying-glass"></i>Analyse image</button>
+    </div><div class="sb-col out" id="out-visual"><div class="placeholder"><i class="fa-solid fa-camera"></i>Pick an image and run.</div></div></div>`;
+  else if(id==='loyalty') body=`
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Pick a customer segment</div>
+      <div class="field"><label>Segment</label><select id="l-seg"><option>Lapsing VIP (high value, going quiet)</option><option>New customer (1 purchase)</option><option>Deal-seeker (promo only)</option><option>Loyal regular</option></select></div>
+      <div class="field"><label>Objective <span class="rangeval" id="l-objV">Win back</span></label><select id="l-obj"><option selected>Win back</option><option>Increase basket size</option><option>Drive 2nd purchase</option><option>Reward & retain</option></select></div>
+      <button class="run" onclick="runLoyalty()"><i class="fa-solid fa-wand-magic-sparkles"></i>Generate next-best-offer</button>
+    </div><div class="sb-col out" id="out-loyalty"><div class="placeholder"><i class="fa-solid fa-gift"></i>Choose a segment to generate an offer.</div></div></div>`;
+  else if(id==='fraud') body=`
+    <div class="sb-body"><div class="sb-col left">
+      <div class="col-label">Simulate a transaction</div>
+      <div class="field"><label>Order value <span class="rangeval" id="fr-valV">$180</span></label><input type="range" id="fr-val" min="20" max="3000" value="180" step="20"></div>
+      <div class="field"><label>Signals present</label><div class="chips" id="fr-chips">
+        <span class="chip" data-sig="New device / IP">New device / IP</span>
+        <span class="chip" data-sig="Billing ≠ shipping country">Billing ≠ shipping</span>
+        <span class="chip" data-sig="5+ attempts in 10 min">Rapid retries</span>
+        <span class="chip" data-sig="Returning customer">Returning customer</span></div></div>
+      <button class="run" onclick="runFraud()"><i class="fa-solid fa-shield-halved"></i>Score transaction</button>
+    </div><div class="sb-col out" id="out-fraud"><div class="placeholder"><i class="fa-solid fa-shield-halved"></i>Set signals and score.</div></div></div>`;
+
+  return head(u) + `<div class="panelcard">${body}${''}</div>` + scaleBarWrap(u);
+}
+function scaleBarWrap(u){return `<div class="panelcard" style="margin-top:14px;border:none;background:transparent">${scaleBar(u)}</div>`;}
+
+/* ---------------- DYNAMIC BINDINGS ---------------- */
+function bindDynamic(id){
+  if(id==='forecast'){
+    const volMap={1:'Low',2:'Medium',3:'High'};
+    const fv=document.getElementById('f-vol'); fv.oninput=()=>document.getElementById('f-volV').textContent=volMap[fv.value];
+    const fl=document.getElementById('f-loc'); fl.oninput=()=>document.getElementById('f-locV').textContent=fl.value;
+    document.getElementById('f-seas').onchange=e=>document.getElementById('f-seasV').textContent=e.target.value;
+  }
+  if(id==='loyalty') document.getElementById('l-obj').onchange=e=>document.getElementById('l-objV').textContent=e.target.value;
+  if(id==='fraud'){const v=document.getElementById('fr-val'); v.oninput=()=>document.getElementById('fr-valV').textContent='$'+(+v.value).toLocaleString(); multiChip('fr-chips');}
+  if(id==='assistant') singleChip('a-chips');
+  if(id==='visual') singleChip('v-chips');
+  if(id==='inventory') sampleSel('inv-samples');
+  if(id==='safety'){sampleSel('saf-samples'); multiChip('saf-chips');}
+}
+function singleChip(w){document.querySelectorAll('#'+w+' .chip').forEach(c=>c.onclick=()=>{document.querySelectorAll('#'+w+' .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');});}
+function multiChip(w){document.querySelectorAll('#'+w+' .chip').forEach(c=>c.onclick=()=>c.classList.toggle('on'));}
+function sampleSel(w){document.querySelectorAll('#'+w+' .sample').forEach(s=>s.onclick=()=>{document.querySelectorAll('#'+w+' .sample').forEach(x=>x.classList.remove('on'));s.classList.add('on');});}
+function selDrop(id){const d=document.getElementById(id);d.classList.add('sel');d.querySelector('.t').textContent='Sample media loaded ✓';d.querySelector('.s').textContent='Using a simulated scene for this demo';}
+
+/* ---------------- HELPERS ---------------- */
+function think(id,cb){const o=document.getElementById(id);o.innerHTML='<div class="thinking"><span class="dot"></span><span class="dot"></span><span class="dot"></span> &nbsp;AI model running on sample data…</div>';setTimeout(cb,820);}
+function animateBars(root){root.querySelectorAll('.fill').forEach(f=>{const w=f.dataset.w;requestAnimationFrame(()=>requestAnimationFrame(()=>f.style.width=w+'%'));});}
+
+/* ---------------- 1. SMART INVENTORY ---------------- */
+function runInventory(){
+  const mode=document.getElementById('inv-mode').value;
+  think('out-inventory',()=>{
+    const o=document.getElementById('out-inventory');
+    if(mode==='count'){
+      o.innerHTML=`<div class="result">
+        <div class="scene">🗄️
+          <span class="box g" style="top:16px;left:18px">SKU·A ×14</span>
+          <span class="box g" style="top:52px;left:120px">SKU·B ×9</span>
+          <span class="box" style="top:92px;left:44px">SKU·C ×22</span>
+          <span class="box r" style="top:60px;left:210px">GAP</span></div>
+        <div class="metric-row">
+          <div class="metric"><div class="k">Items detected</div><div class="v aws">45</div><div class="d">3 SKUs identified</div></div>
+          <div class="metric"><div class="k">Count accuracy</div><div class="v good">96%</div><div class="d">vs. manual audit</div></div></div>
+        <div class="det"><span class="nm"><span class="e">🧴</span> SKU-A · Cleanser 200ml</span><span class="q">×14</span></div>
+        <div class="det"><span class="nm"><span class="e">🧃</span> SKU-B · Toner 150ml</span><span class="q">×9</span></div>
+        <div class="det"><span class="nm"><span class="e">🧼</span> SKU-C · Bar soap 3pk</span><span class="q">×22</span></div>
+        <div class="insight"><b>From a single photo:</b> item recognition + quantity in seconds, vs. a manual stock-take. One empty facing flagged for replenishment.</div>
+      </div>`;
+    }else{
+      o.innerHTML=`<div class="result">
+        <div class="scene">📦<span class="box r" style="top:40px;left:60px">LOW</span><span class="box r" style="top:84px;left:170px">EMPTY</span><span class="box g" style="top:20px;left:200px">OK</span></div>
+        <div class="metric-row">
+          <div class="metric"><div class="k">Facings checked</div><div class="v info">38</div></div>
+          <div class="metric"><div class="k">Need action</div><div class="v err">6</div><div class="d">2 empty · 4 low</div></div></div>
+        <div style="margin-bottom:8px"><span class="tag err">2 empty facings</span><span class="tag warn">4 low stock</span><span class="tag good">32 OK</span></div>
+        <div class="insight"><b>Auto replenishment list:</b> staff get a prioritised pick-list per aisle — no walking the floor with a clipboard.</div>
+      </div>`;
+    }
+  });
+}
+
+/* ---------------- 2. STAFF SAFETY ---------------- */
+function runSafety(){
+  const checks=[...document.querySelectorAll('#saf-chips .chip.on')].map(c=>c.dataset.c);
+  think('out-safety',()=>{
+    const o=document.getElementById('out-safety');
+    const events=[];
+    if(checks.includes('PPE / helmet & vest')) events.push(['warn','🦺','PPE check','1 worker without hi-vis vest in loading bay']);
+    if(checks.includes('Restricted-zone entry')) events.push(['err','⛔','Restricted zone','Entry detected near active machinery']);
+    if(checks.includes('Forklift–pedestrian proximity')) events.push(['err','🚜','Forklift proximity','Pedestrian within 2m of moving forklift']);
+    if(checks.includes('Slip / fall detection')) events.push(['good','✅','Slip & fall','No incidents detected this clip']);
+    if(!events.length) events.push(['good','✅','No checks selected','Pick at least one safety check']);
+    const score=Math.max(60,100-events.filter(e=>e[0]!=='good').length*13);
+    o.innerHTML=`<div class="result">
+      <div class="scene">🏭<span class="box g" style="top:18px;left:24px">helmet ✓</span><span class="box r" style="top:70px;left:150px">no-vest</span><span class="box" style="top:40px;left:220px">zone</span></div>
+      <div class="metric-row">
+        <div class="metric"><div class="k">Safety score</div><div class="v ${score>85?'good':'err'}">${score}<span style="font-size:13px;color:var(--muted)">/100</span></div></div>
+        <div class="metric"><div class="k">Events flagged</div><div class="v aws">${events.filter(e=>e[0]!=='good').length}</div><div class="d">this clip</div></div></div>
+      ${events.map(e=>`<div class="det"><span class="nm"><span class="e">${e[1]}</span> ${e[2]}</span><span class="tag ${e[0]}">${e[3]}</span></div>`).join('')}
+      <div class="insight"><b>Aggregate, not individual:</b> alerts flag unsafe <i>conditions</i> for a supervisor to act — reported as compliance trends, not personal surveillance.</div>
+    </div>`;
+  });
+}
+
+/* ---------------- 3. FORECAST ---------------- */
+function runForecast(){
+  const cat=document.getElementById('f-cat').value, seas=document.getElementById('f-seas').value;
+  const vol=+document.getElementById('f-vol').value, loc=+document.getElementById('f-loc').value;
+  const lift=seas==='Business as usual'?6:seas==='Year-End Sale'?42:seas==='Chinese New Year'?38:seas==='Great Singapore Sale'?31:27;
+  const conf=Math.max(72,95-vol*6-(loc>25?4:0)); const so=(vol*3+2).toFixed(0), wa=(vol*2+3).toFixed(0);
+  think('out-forecast',()=>{const o=document.getElementById('out-forecast');
+    o.innerHTML=`<div class="result">
+      <div class="metric-row"><div class="metric"><div class="k">Predicted demand</div><div class="v aws">+${lift}%</div><div class="d">vs baseline · ${seas}</div></div>
+        <div class="metric"><div class="k">Confidence</div><div class="v good">${conf}%</div><div class="d">${vol===1?'low':vol===2?'medium':'high'} volatility</div></div></div>
+      <div class="insight"><b>Recommendation:</b> pre-position <b>${cat}</b> across ${loc} locations for ${seas}. Top 3 stores absorb ~55% of uplift.</div>
+      <div class="bars">
+        <div class="bar"><span class="lab">Stock-outs</span><div class="track"><div class="fill" data-w="${100-so*4}"></div></div><span class="pct">-${so}%</span></div>
+        <div class="bar"><span class="lab">Dead stock</span><div class="track"><div class="fill" data-w="${100-wa*4}"></div></div><span class="pct">-${wa}%</span></div>
+        <div class="bar"><span class="lab">Margin</span><div class="track"><div class="fill sra" data-w="${60+vol*5}"></div></div><span class="pct">+${(vol*1.5+2).toFixed(1)}%</span></div></div>
+    </div>`; animateBars(o);});
+}
+
+/* ---------------- 4. ASSISTANT ---------------- */
+function runAssistant(){
+  const persona=document.getElementById('a-persona').value;
+  const custom=document.getElementById('a-custom').value.trim();
+  const chip=document.querySelector('#a-chips .chip.on');
+  const q=custom||(chip?chip.dataset.q:'Can you help me find something?');
+  const A={
+    "I have oily skin and a $50 budget — what do you recommend?":"For oily skin under $50, I'd pair a gentle foaming cleanser ($19) with an oil-free gel moisturiser ($24). Both in stock at your nearest outlet. Add a niacinamide serum — it's on promo this week?",
+    "Do you have this in size M, and can I collect it today?":"Size M is at Orchard (3 left) and Jurong (5 left). I can reserve it for same-day pickup in 2 hours. Hold one under your member account?",
+    "What's a good gift for a 10-year-old who loves science?":"Great picks: a volcano kit ($32) or a beginner microscope set ($45), both top-rated for ages 8–12. The microscope has free gift wrapping today — bundle it?"};
+  const ans=A[q]||`Happy to help! Based on our ${persona.toLowerCase()} range, here are a few options — I can check live stock, pricing and member offers for any of them.`;
+  think('out-assistant',()=>{document.getElementById('out-assistant').innerHTML=`<div class="result">
+    <div class="chatline u"><div class="av">You</div><div class="msg">${q}</div></div>
+    <div class="chatline a"><div class="av"><i class="fa-solid fa-robot"></i></div><div class="msg">${ans}</div></div>
+    <div style="margin-top:12px"><span class="tag good"><i class="fa-solid fa-check"></i> Grounded on catalogue</span><span class="tag good">Live stock</span><span class="tag">Member-aware</span><span class="tag warn">Human handoff ready</span></div>
+    <div class="insight" style="margin-top:14px"><b>Why it matters:</b> answers every shopper, every channel, 24/7 — in your brand voice, grounded only on your data.</div></div>`;});
+}
+
+/* ---------------- 5. VISUAL ---------------- */
+function runVisual(){
+  const mode=document.getElementById('v-mode').value;
+  const img=(document.querySelector('#v-chips .chip.on')||{}).dataset.img||'👗';
+  think('out-visual',()=>{const o=document.getElementById('out-visual');
+    if(mode==='search'){const cells=[[img,98],['🛍️',91],['👚',88],['🧥',84],['👛',79],['🧢',74]];
+      o.innerHTML=`<div class="result"><div class="col-label">Visually similar products (ranked)</div>
+        <div class="metric-row">${cells.slice(0,3).map((c,i)=>`<div class="metric"><div class="k">${i===0?'Query':'Match '+i}</div><div class="v" style="font-size:26px">${c[0]}</div><div class="d">${c[1]}% match</div></div>`).join('')}</div>
+        <div class="insight"><b>Shopper searched with a photo</b> → matched your catalogue in &lt;1s. “See-it, find-it” lifts conversion on hard-to-describe items.</div></div>`;
+    }else{o.innerHTML=`<div class="result"><div class="metric-row">
+        <div class="metric"><div class="k">Shelf compliance</div><div class="v info">82%</div><div class="d">vs planogram</div></div>
+        <div class="metric"><div class="k">Issues found</div><div class="v aws">4</div><div class="d">from 1 photo</div></div></div>
+        <div style="margin-bottom:6px"><span class="tag warn">2 out-of-stock</span><span class="tag warn">1 misplaced SKU</span><span class="tag warn">1 label gap</span><span class="tag good">End-cap ✓</span></div>
+        <div class="insight"><b>Automated shelf audit</b> replaces manual walk-throughs — a prioritised fix-list per store, per aisle, in seconds.</div></div>`;}
+  });
+}
+
+/* ---------------- 6. LOYALTY ---------------- */
+function runLoyalty(){
+  const seg=document.getElementById('l-seg').value, obj=document.getElementById('l-obj').value;
+  const offer=seg.startsWith('Lapsing')?'A personalised “we miss you” bundle of their 2 most-bought categories at 15% off, valid 10 days.'
+    :seg.startsWith('New')?'A 2nd-purchase nudge: free delivery + a sample matched to their first buy, expiring in 7 days.'
+    :seg.startsWith('Deal')?'A points-multiplier on full-price items to shift them off promo-only behaviour.'
+    :'Early access to the new range + a birthday-month reward to deepen loyalty.';
+  const lift=seg.startsWith('Lapsing')?'22%':seg.startsWith('New')?'1.8×':seg.startsWith('Deal')?'14%':'27%';
+  const ll=seg.startsWith('New')?'repeat-purchase rate':'incremental revenue';
+  think('out-loyalty',()=>{document.getElementById('out-loyalty').innerHTML=`<div class="result">
+    <div class="metric-row"><div class="metric"><div class="k">Objective</div><div class="v aws" style="font-size:16px;padding-top:6px">${obj}</div></div>
+      <div class="metric"><div class="k">Modelled lift</div><div class="v good">${lift}</div><div class="d">${ll}</div></div></div>
+    <div class="col-label">Next-best-offer</div>
+    <div class="chatline a"><div class="av"><i class="fa-solid fa-wand-magic-sparkles"></i></div><div class="msg">${offer}</div></div>
+    <div class="insight" style="margin-top:12px"><b>1:1, not one-size-fits-all.</b> Each segment gets a different action &amp; channel — driven by their own history.</div></div>`;});
+}
+
+/* ---------------- 7. FRAUD ---------------- */
+function runFraud(){
+  const val=+document.getElementById('fr-val').value;
+  const sigs=[...document.querySelectorAll('#fr-chips .chip.on')].map(c=>c.dataset.sig);
+  let risk=12; if(sigs.includes('New device / IP'))risk+=22; if(sigs.includes('Billing ≠ shipping country'))risk+=26; if(sigs.includes('5+ attempts in 10 min'))risk+=34; if(sigs.includes('Returning customer'))risk-=18; if(val>1500)risk+=12;
+  risk=Math.max(3,Math.min(97,risk));
+  const d=risk>66?['BLOCK','var(--err)','fa-ban']:risk>33?['REVIEW','var(--warn)','fa-magnifying-glass']:['APPROVE','var(--good)','fa-check'];
+  think('out-fraud',()=>{const o=document.getElementById('out-fraud');
+    o.innerHTML=`<div class="result"><div class="metric-row">
+      <div class="metric"><div class="k">Risk score</div><div class="v" style="color:${d[1]}">${risk}<span style="font-size:13px;color:var(--muted)">/100</span></div></div>
+      <div class="metric"><div class="k">Decision</div><div class="v" style="color:${d[1]};font-size:18px;padding-top:5px"><i class="fa-solid ${d[2]}"></i> ${d[0]}</div><div class="d">real-time · &lt;100ms</div></div></div>
+      <div class="bars"><div class="bar"><span class="lab">Risk level</span><div class="track"><div class="fill" style="background:${d[1]}" data-w="${risk}"></div></div><span class="pct">${risk}%</span></div></div>
+      <div style="margin-bottom:6px">${sigs.length?sigs.map(s=>`<span class="tag warn">${s}</span>`).join(''):'<span class="tag good">No risk signals</span>'}</div>
+      <div class="insight"><b>Trust at checkout.</b> Score every transaction in real time — block fraud &amp; chargebacks while genuine customers sail through.</div></div>`;
+    animateBars(o);});
+}
+
+/* ---------------- MODAL ---------------- */
+function openScale(name){document.getElementById('m-name').textContent=name;document.getElementById('modal').classList.add('open');}
+function closeScale(){document.getElementById('modal').classList.remove('open');}
+
+/* Robust delegated activation: covers taps, clicks, Enter/Space on cards & nav */
+document.addEventListener('click',function(ev){
+  var el=ev.target.closest('[data-uc]');
+  if(el){ ev.preventDefault(); openUse(el.getAttribute('data-uc')); }
+});
+document.addEventListener('keydown',function(ev){
+  if(ev.key==='Enter'||ev.key===' '){
+    var el=ev.target.closest&&ev.target.closest('[data-uc]');
+    if(el){ ev.preventDefault(); openUse(el.getAttribute('data-uc')); }
+  }
+});
+</script>
+
+
+</body></html>
